@@ -1,4 +1,4 @@
-name: 'Tests'
+name: Tests
 on:
   push:
     - master
@@ -23,7 +23,7 @@ jobs:
           key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
-      - name: Install mocha
+      - name: Instalando mocha
         run: npm install -g mocha
       - name: Instalando Dependencias
         run: npm install
